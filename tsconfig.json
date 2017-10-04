@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "target": "es5",
+		//"lib": ["2016", "DOM"],
+        "outDir": "assets/scripts",
+        "rootDir": "assets/typescripts"
+    }
+}

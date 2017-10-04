@@ -1,0 +1,32 @@
+body {
+    background: none repeat scroll 0 0 #dedede;
+    font-family: Orbitron, Arial,Helvetica,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+#content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.clock {
+    font-size: 100px;
+}
+
+.clock span{
+    display: inline-block;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+    0% {background-color: red; transform: rotate(0deg);}
+    50% {background-color: yellow; transform: rotate(180deg);}
+    100% {background-color: red; transform: rotate(360deg);}
+}
