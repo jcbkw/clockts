@@ -12,14 +12,16 @@ System.register(["./Clocks"], function (exports_1, context_1) {
             SpecificClockModel = /** @class */ (function () {
                 function SpecificClockModel() {
                 }
-                SpecificClockModel.prototype.update = function (date, offset) {
+                SpecificClockModel.prototype.update = function (date, offset, timeZone) {
                     if (offset === void 0) { offset = 0; }
+                    if (timeZone === void 0) { timeZone = ""; }
                     if (offset !== 0) {
                         date = this.calcTime(offset, date);
                     }
                     this.hours = Clocks_1.Clocks.formatDigits(date.getHours());
                     this.minutes = Clocks_1.Clocks.formatDigits(date.getMinutes());
                     this.seconds = Clocks_1.Clocks.formatDigits(date.getSeconds());
+                    this.timeZone = timeZone;
                     return this;
                 };
                 /**

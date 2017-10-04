@@ -6,14 +6,17 @@ System.register([], function (exports_1, context_1) {
         setters: [],
         execute: function () {
             ClockCoolView = /** @class */ (function () {
-                function ClockCoolView(parent) {
+                function ClockCoolView(parent, clockClass) {
+                    if (clockClass === void 0) { clockClass = "clock"; }
                     this.parent = parent;
+                    this.clockClass = clockClass;
                     this.render();
                 }
                 ClockCoolView.prototype.update = function (shit) {
                     this.setText(this.hours, shit.hours);
                     this.setText(this.minutes, shit.minutes);
                     this.setText(this.seconds, shit.seconds);
+                    this.setText(this.timeZone, shit.timeZone);
                 };
                 ClockCoolView.prototype.getElement = function () {
                     return this.el;
@@ -30,7 +33,7 @@ System.register([], function (exports_1, context_1) {
                 };
                 ClockCoolView.prototype.render = function () {
                     this.el = document.createElement("div");
-                    this.el.className = "clock";
+                    this.el.className = this.clockClass;
                     this.hours = document.createElement("span");
                     this.minutes = this.hours.cloneNode(true);
                     this.seconds = this.hours.cloneNode(true);

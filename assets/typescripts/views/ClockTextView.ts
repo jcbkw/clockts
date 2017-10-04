@@ -5,7 +5,7 @@ export class ClockTextView implements IView {
     }
 
     public update(shit: IClockModel): void {
-        console.log(`${shit.hours}:${shit.minutes}:${shit.seconds}`);
+        console.log(`${shit.hours}:${shit.minutes}:${shit.seconds} ${shit.timeZone}`);
     }
     
     public getElement(): Element {

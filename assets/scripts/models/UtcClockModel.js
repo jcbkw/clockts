@@ -16,6 +16,7 @@ System.register(["./Clocks"], function (exports_1, context_1) {
                     this.hours = Clocks_1.Clocks.formatDigits(date.getUTCHours());
                     this.minutes = Clocks_1.Clocks.formatDigits(date.getUTCMinutes());
                     this.seconds = Clocks_1.Clocks.formatDigits(date.getUTCSeconds());
+                    this.timeZone = "UTC";
                     return this;
                 };
                 return UtcClockModel;

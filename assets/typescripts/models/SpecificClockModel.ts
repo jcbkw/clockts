@@ -5,8 +5,9 @@ export class SpecificClockModel implements IClockModel {
     public hours: string;
     public minutes: string;
     public seconds: string;
+    public timeZone: string;
 
-    public update(date: Date, offset: number = 0): SpecificClockModel {
+    public update(date: Date, offset: number = 0, timeZone: string = ""): SpecificClockModel {
         if(offset !== 0){
             date = this.calcTime(offset, date);
         }
@@ -14,7 +15,7 @@ export class SpecificClockModel implements IClockModel {
         this.hours = Clocks.formatDigits(date.getHours());
         this.minutes = Clocks.formatDigits(date.getMinutes());
         this.seconds = Clocks.formatDigits(date.getSeconds());
-        
+        this.timeZone = timeZone;
         return this;
     }
     

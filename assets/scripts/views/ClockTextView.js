@@ -11,7 +11,7 @@ System.register([], function (exports_1, context_1) {
                     this.render();
                 }
                 ClockTextView.prototype.update = function (shit) {
-                    console.log(shit.hours + ":" + shit.minutes + ":" + shit.seconds);
+                    console.log(shit.hours + ":" + shit.minutes + ":" + shit.seconds + " " + shit.timeZone);
                 };
                 ClockTextView.prototype.getElement = function () {
                     return null;

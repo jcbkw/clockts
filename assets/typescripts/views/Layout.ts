@@ -7,6 +7,10 @@ export class Layout implements IView {
     public getElement (): Element {
         return this.el;
     }
+
+    public getClass (): Element {
+        return this.el;
+    }
     
     private render(): void {
         this.el = this.dom.createElement("div");

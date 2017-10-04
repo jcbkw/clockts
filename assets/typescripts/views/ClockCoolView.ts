@@ -1,6 +1,6 @@
 export class ClockCoolView  implements IView {
     
-    constructor(private parent: IView) {
+    constructor(private parent: IView, private clockClass: string = "clock") {
         this.render();
     }
     
@@ -8,6 +8,7 @@ export class ClockCoolView  implements IView {
         this.setText(this.hours, shit.hours);
         this.setText(this.minutes, shit.minutes);
         this.setText(this.seconds, shit.seconds);
+        this.setText(this.timeZone, shit.timeZone);
     }
     
     public getElement(): Element {
@@ -28,8 +29,8 @@ export class ClockCoolView  implements IView {
     }
     
     private render(): void {
-      this.el = document.createElement("div");
-        this.el.className = "clock";
+        this.el = document.createElement("div");
+        this.el.className = this.clockClass;
         
         this.hours = document.createElement("span");
         this.minutes = <Element>this.hours.cloneNode(true);
@@ -48,5 +49,6 @@ export class ClockCoolView  implements IView {
     private hours: Element;
     private minutes: Element;
     private seconds: Element;
+    private timeZone: Element;
     
 }

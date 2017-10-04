@@ -13,6 +13,9 @@ System.register([], function (exports_1, context_1) {
                 Layout.prototype.getElement = function () {
                     return this.el;
                 };
+                Layout.prototype.getClass = function () {
+                    return this.el;
+                };
                 Layout.prototype.render = function () {
                     this.el = this.dom.createElement("div");
                     this.el.id = "content";

@@ -16,6 +16,7 @@ System.register(["./Clocks"], function (exports_1, context_1) {
                     this.hours = Clocks_1.Clocks.formatDigits(date.getHours());
                     this.minutes = Clocks_1.Clocks.formatDigits(date.getMinutes());
                     this.seconds = Clocks_1.Clocks.formatDigits(date.getSeconds());
+                    this.timeZone = "EST";
                     return this;
                 };
                 return DefaultClockModel;
