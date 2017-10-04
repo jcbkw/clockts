@@ -27,8 +27,8 @@ System.register(["./views/ClockView", "./views/Layout", "./models/DefaultClockMo
                 }
                 ClockController.prototype.render = function () {
                     var layout = new Layout_1.Layout(this.dom);
-                    var estView = new ClockView_1.ClockView(layout, "");
                     var utcView = new ClockView_1.ClockView(layout);
+                    var estView = new ClockView_1.ClockView(layout, "");
                     var specificView = new ClockView_1.ClockView(layout, "");
                     var defaultModel = new DefaultClockModel_1.DefaultClockModel;
                     var utcModel = new UtcClockModel_1.UtcClockModel;

@@ -11,8 +11,8 @@ export class ClockController {
 
     public render (): void {
         let layout = new Layout(this.dom);
-        let estView = new ClockView(layout, ""); 
         let utcView = new ClockView(layout); 
+        let estView = new ClockView(layout, ""); 
         let specificView = new ClockView(layout,"");
         let defaultModel = new DefaultClockModel;
         let utcModel = new UtcClockModel;
